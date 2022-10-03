@@ -6,13 +6,18 @@
       <img :src="imgSrc" alt="" />
     </div>
     <div class="anime-info-box">
-      <div class="anime-title">
-        {{ title }}
-      </div>
-      <div class="anime-card-episodes">{{ episodes }} ep</div>
-      <div class="anime-card-score">
-        {{ score }}
-      </div>
+      <div class="anime-title">{{ title }}</div>
+      <div class="anime-">{{ type }}</div>
+      <div class="anime-">{{ studios }}</div>
+      <div class="anime-">{{ dateAired }}</div>
+      <div class="anime-">{{ status }}</div>
+      <div class="anime-">{{ genre }}</div>
+
+      <div class="anime-card-score">{{ score }}</div>
+      <div class="anime-">{{ rating }}</div>
+      <div class="anime-">{{ duration }}</div>
+      <div class="anime-">{{ episodes }}</div>
+      <div class="anime-">{{ popularity }}</div>
     </div>
   </div>
 </template>
@@ -34,11 +39,43 @@ export default {
       type: String,
       default: ". . .",
     },
+    type: {
+      type: String,
+      default: ". . .",
+    },
+    studios: {
+      type: String,
+      default: ". . .",
+    },
+    dateAired: {
+      type: String,
+      default: ". . .",
+    },
+    status: {
+      type: String,
+      default: ". . .",
+    },
+    genre: {
+      type: String,
+      default: ". . .",
+    },
+    score: {
+      type: Number,
+      default: 0,
+    },
+    rating: {
+      type: String,
+      default: ". . .",
+    },
+    duration: {
+      type: String,
+      default: ". . .",
+    },
     episodes: {
       type: Number,
       default: 0,
     },
-    score: {
+    popularity: {
       type: Number,
       default: 0,
     },
@@ -53,5 +90,11 @@ export default {
 }
 .anime-info-box {
   color: white;
+}
+.anime-img img {
+  width: 15rem;
+  height: 20rem;
+  background-size: cover;
+  background-position: center;
 }
 </style>

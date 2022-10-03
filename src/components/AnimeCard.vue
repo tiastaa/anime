@@ -58,6 +58,8 @@ export default {
 .anime-card-img img {
   width: 15rem;
   height: 20rem;
+  background-size: cover;
+  background-position: center;
 }
 .anime-card-title {
   color: white;
