@@ -28,10 +28,10 @@ export default {
   color: white;
   border-bottom: 2px solid rgba(106, 72, 83, 0.691);
   font-size: inherit;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to bottom,
     rgba(178, 178, 178, 0),
     #4f383825
-  );
+  ); */
 }
 </style>

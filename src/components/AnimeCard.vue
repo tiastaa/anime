@@ -16,6 +16,7 @@
 </template>
 
 <script>
+
 export default {
   name: "AnimeCard",
   props: {
@@ -41,45 +42,5 @@ export default {
 </script>
 
 <style lang="css" scoped>
-.anime-card-box {
-  position: relative;
-  width: 16rem;
-  /* height: 24.5rem; */
-  border-radius: 3px;
-  background-color: rgba(62, 62, 62, 0.258);
-  padding: 1rem;
-  margin: 10px;
-  cursor: pointer;
-  /* transform: scaleY(40rem); */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.anime-card-img img {
-  width: 15rem;
-  height: 20rem;
-  background-size: cover;
-  background-position: center;
-}
-.anime-card-title {
-  color: white;
-  padding: 3px;
-}
-.anime-card-episodes {
-  color: white;
-  padding: 3px;
-}
-.anime-card-score {
-  color: white;
-  padding: 3px;
-}
-.anime-card-additional-info-box {
-  display: flex;
-  justify-content: space-around;
-  /* position: absolute; */
-  /* bottom: ; */
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-between; */
-}
+ /* @import "@/assets/style/AnimeCard.scss"; */
 </style>

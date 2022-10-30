@@ -1,5 +1,5 @@
 <template>
-  <div class="anime-box">
+  <div class="anime-synopsis-box">
     <div class="anime-synopsis">
       {{ synopsis }}
     </div>
@@ -24,5 +24,12 @@ export default {
 <style lang="css" scoped>
 .anime-synopsis {
   color: white;
+  display: flex;
+  justify-content: center;
+  margin:0rem 12rem;
+  text-align: left;
+  line-height: 1.5rem;
+  margin-bottom: 5rem ;
 }
+
 </style>

@@ -4,7 +4,6 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 // 1. Import route components.
 import Home from './pages/Home'
 import AnimeFullDescription from './pages/AnimeFullDescription'
-import Favourite from './pages/Favourite'
 import Search from './pages/Search'
 import RandomAnime from './pages/RandomAnime'
 
@@ -17,8 +16,8 @@ const routes = [
     component: Home,
     name: 'home',
   },
-  { path: '/favourite', component: Favourite, name: 'favourite' },
-  { path: '/search/:id?', component: Search, name: 'search' },
+ 
+  { path: '/search', component: Search, name: 'search' },
   { path: '/anime/:id?', component: AnimeFullDescription, name: 'anime' },
   { path: '/randomanime/:id?', component: RandomAnime, name: 'randomanime' },
   

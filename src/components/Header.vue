@@ -13,18 +13,23 @@
         ><my-button-vue text="Favourite"
       /></router-link>
 
-      <my-search-input-vue></my-search-input-vue>
+
+      <div>
+    <input type="search" class="my-search-input"  placeholder="Search anime" v-model="searchInfo" />
+
+    <my-button-vue text="Search" @click="(showSearchAnime())"></my-button-vue>
+  </div>
     </div>
 
     <!-- route outlet -->
     <!-- component matched by the route will render here -->
     <h1 class="header-title">MY ANIME</h1>
   </header>
-  <router-view></router-view>
+  <!-- <router-view></router-view> -->
 </template>
 
 <script>
-import MySearchInputVue from "@/ui/MySearchInput.vue";
+
 import MyButtonVue from "@/ui/MyButton.vue";
 //    import axios from 'axios';
 
@@ -32,31 +37,24 @@ export default {
   name: "Header",
   components: {
     MyButtonVue,
-    MySearchInputVue,
+   
   },
+  data(){
+    return {
+      searchInfo:""
+    };
+  }
+  ,
   methods: {
-    // data() {
-    //     return {
-    //         info: null
-    //             };
-    //         },
-    // mounted() {
-    //         axios
-    //         .get('https://api.jikan.moe/v4/random/anime')
-    //         .then(response => (this.info = response));
-    //     },
-    // data(){
-    //     return{info:null}
-    // },
-    // mounted(){axios.get('https://api.jikan.moe/v4/random/anime')
-    //     .then((resp)=>{
-    //     this.info=resp.data.data;
-    //     console.log(resp.data.data)
-    // }),
-    // ShowRandomAnime() {
-    //   this.$router.push({
-    //     name: 'randomanime',
-    //   })}
+    showSearchAnime() {
+      this.$store.dispatch("fetchAnimeList" , this.searchInfo);
+      
+      this.$router.push({
+        name: "search",
+
+      });
+      return console.log(this.searchInfo);
+    },
   },
 };
 </script>
@@ -109,7 +107,11 @@ export default {
 .header-title:hover {
   cursor: default;
 }
-
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    width: 0px;
+    height: 0px;
+}
 /* .router-link{
    
     
@@ -126,4 +128,18 @@ export default {
 .router-link:active{
    background-color: rgba(147, 104, 107, 0.405);
 }  */
+.my-search-input {
+  background: none;
+  /* border-radius: 3px; */
+  border: none;
+  outline: none;
+  color: white;
+  border-bottom: 2px solid rgba(106, 72, 83, 0.691);
+  font-size: inherit;
+  /* background-image: linear-gradient(
+    to bottom,
+    rgba(178, 178, 178, 0),
+    #4f383825
+  ); */
+}
 </style>

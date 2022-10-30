@@ -1,5 +1,6 @@
 <template>
-  <main>
+  <main-masterpage-vue>
+    <main>
     <!-- <h3 class="h3-title">Top anime list</h3> -->
     <div>
       <!-- <div class="logo-box"></div> -->
@@ -7,15 +8,22 @@
       <anime-card-list-vue :animeListData="topAnimes" />
     </div>
   </main>
+
+  </main-masterpage-vue>
+ 
 </template>
 
 <script>
 import AnimeCardListVue from "@/components/AnimeCardList.vue";
+// import FooterVue from "@/components/Footer.vue";
+import MainMasterpageVue from "@/masterpages/MainMasterpage.vue";
 // import axios from 'axios';
 export default {
   name: "Home",
   components: {
     AnimeCardListVue,
+    // FooterVue,
+    MainMasterpageVue,
   },
 
   // data(){
@@ -30,6 +38,7 @@ export default {
   // }
   computed: {
     topAnimes() {
+      console.log(this.$store.state.topAnimeList)
       return this.$store.state.topAnimeList;
     },
   },

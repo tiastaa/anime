@@ -1,23 +1,24 @@
 <template>
-  <!-- <div><img :src="anime.images.jpg.large_image_url" alt="" /></div> -->
-  <!-- <anime-main-info-vue
-    :key="anime.mal_id"
-    :title="anime.title"
-    :episodes="anime.episodes"
-    :score="anime.score"
-    :img-src="anime.image_url"
-  /> -->
-  <anime-full-info-vue :animeInfo="anime" />
+<!-- <main-masterpages-> -->
+  <main-masterpage-vue>
+    
+    <anime-full-info-vue :animeInfo="anime" />
+  </main-masterpage-vue>
+<!-- </main-masterpages-> -->
+
 </template>
-<!-- :animeImgInfo="animeImg"  -->
+
 <script>
-// import AnimeMainInfoVue from "@/components/AnimeMainInfo.vue";
+
 import AnimeFullInfoVue from "@/components/AnimeFullInfo.vue";
+import MainMasterpageVue from "@/masterpages/MainMasterpage.vue";
 export default {
   name: "App",
   components: {
     // AnimeMainInfoVue,
     AnimeFullInfoVue,
+    MainMasterpageVue
+    // MainMasterpageVue,
   },
 
   computed: {
